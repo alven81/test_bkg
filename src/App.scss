@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.block_glow {
+  box-sizing: border-box;
+  width: 202px;
+  height: 202px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+
+  span {
+
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0;
+    display: block;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border: 2px solid #020307;
+    transition: all 2s ease-in-out;
+
+    &:first-child {
+      opacity: 1;
+      background-image: linear-gradient(135deg, #05070F 24.76%, #161A2B 100%);
+      //background-image: linear-gradient(0deg,red,magenta);
+    }
+
+    &:nth-child(2) {
+      opacity: 1;
+      background-image: linear-gradient(-135deg, #05070F 24.76%, #161A2B 100%);
+    }
+
+    &:nth-child(3) {
+      opacity: 1;
+      background-image: linear-gradient(45deg, #05070F 24.76%, #161A2B 100%);
+    }
+
+    &:last-child {
+      opacity: 1;
+      background-image: linear-gradient(-45deg, #05070F 24.76%, #161A2B 100%);
+    }
+  }
+}
+
+.block_empty {
+  box-sizing: border-box;
+  width: 202px;
+  height: 202px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+
+  span {
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0;
+    display: block;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border: 2px solid #020307;
+
+    &:first-child {
+      border-right: 2px solid #3f476778;
+      border-bottom: 2px solid #3f476778;
+    }
+
+    &:last-child {
+      border-left: 2px solid #3f476778;
+      border-top: 2px solid #3f476778;
+    }
+  }
+}
+
+.block_simple {
+  box-sizing: border-box;
+  width: 202px;
+  height: 202px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+
+  span {
+    transition: all 2s ease-in-out;
+
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0;
+    display: block;
+    height: 100px;
+    width: 100px;
+    border: 2px solid #020307;
+    &:first-child {
+      opacity: 0;
+      background-image: linear-gradient(135deg, #05070F 24.76%, #161A2B 100%);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      background-image: linear-gradient(-135deg, #05070F 24.76%, #161A2B 100%);
+    }
+
+    &:nth-child(3) {
+      opacity: 0;
+      background-image: linear-gradient(45deg, #05070F 24.76%, #161A2B 100%);
+    }
+
+    &:last-child {
+      opacity: 0;
+      background-image: linear-gradient(-45deg, #05070F 24.76%, #161A2B 100%);
+
+    }
+  }
+}
